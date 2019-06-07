@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TalendMetadata:SalesforceSchemaConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmi:id="_RB7jwPpFEeSzvqEJpfiUhA" name="ConexaoOssis1" webServiceUrl="https://www.salesforce.com/services/Soap/u/25.0" userName="fernando.lobato@ossis.com.br" password="6UpEtph1uLQRdMqt6q2NVyR9O85oZxtyVx1yW2W9w/TmlFSuma+wFw==" moduleName="OpportunityLineItem" queryCondition="" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="" batchSize="250" timeOut="60000" webServiceUrlTextForOAuth="https://login.salesforce.com/services/oauth2" salesforceVersion="25.0" loginType="basic">
+  <modules xmi:id="_RB7jwfpFEeSzvqEJpfiUhA" id="_Qh_fcPpFEeSzvqEJpfiUhA" label="Opportunity" moduleName="Opportunity">
+    <tables xmi:id="_RB7jwvpFEeSzvqEJpfiUhA" name="Opportunity" id="_QiAGgPpFEeSzvqEJpfiUhA" label="Opportunity">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7jw_pFEeSzvqEJpfiUhA" label="Id" length="18" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB7jxPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7jxfpFEeSzvqEJpfiUhA" label="IsDeleted" talendType="id_Boolean" nullable="false">
+        <initialValue xmi:id="_RB7jxvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7jx_pFEeSzvqEJpfiUhA" label="AccountId" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB7jyPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7jyfpFEeSzvqEJpfiUhA" label="RecordTypeId" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB7jyvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7jy_pFEeSzvqEJpfiUhA" label="Name" length="120" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB7jzPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7jzfpFEeSzvqEJpfiUhA" label="Description" length="32000" talendType="id_String">
+        <initialValue xmi:id="_RB7jzvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7jz_pFEeSzvqEJpfiUhA" label="StageName" length="40" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB7j0PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j0fpFEeSzvqEJpfiUhA" label="Amount" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB7j0vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j0_pFEeSzvqEJpfiUhA" label="Probability" length="3" talendType="id_Double">
+        <initialValue xmi:id="_RB7j1PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j1fpFEeSzvqEJpfiUhA" label="CloseDate" talendType="id_Date" nullable="false" pattern="&quot;yyyy-MM-dd&quot;">
+        <initialValue xmi:id="_RB7j1vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j1_pFEeSzvqEJpfiUhA" label="Type" length="40" talendType="id_String">
+        <initialValue xmi:id="_RB7j2PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j2fpFEeSzvqEJpfiUhA" label="NextStep" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB7j2vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j2_pFEeSzvqEJpfiUhA" label="LeadSource" length="40" talendType="id_String">
+        <initialValue xmi:id="_RB7j3PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j3fpFEeSzvqEJpfiUhA" label="IsClosed" talendType="id_Boolean" nullable="false">
+        <initialValue xmi:id="_RB7j3vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j3_pFEeSzvqEJpfiUhA" label="IsWon" talendType="id_Boolean" nullable="false">
+        <initialValue xmi:id="_RB7j4PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j4fpFEeSzvqEJpfiUhA" label="ForecastCategory" length="40" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB7j4vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j4_pFEeSzvqEJpfiUhA" label="ForecastCategoryName" length="40" talendType="id_String">
+        <initialValue xmi:id="_RB7j5PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j5fpFEeSzvqEJpfiUhA" label="CampaignId" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB7j5vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j5_pFEeSzvqEJpfiUhA" label="HasOpportunityLineItem" talendType="id_Boolean" nullable="false">
+        <initialValue xmi:id="_RB7j6PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j6fpFEeSzvqEJpfiUhA" label="Pricebook2Id" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB7j6vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j6_pFEeSzvqEJpfiUhA" label="OwnerId" length="18" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB7j7PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j7fpFEeSzvqEJpfiUhA" label="CreatedDate" talendType="id_Date" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;">
+        <initialValue xmi:id="_RB7j7vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j7_pFEeSzvqEJpfiUhA" label="CreatedById" length="18" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB7j8PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j8fpFEeSzvqEJpfiUhA" label="LastModifiedDate" talendType="id_Date" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;">
+        <initialValue xmi:id="_RB7j8vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j8_pFEeSzvqEJpfiUhA" label="LastModifiedById" length="18" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB7j9PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j9fpFEeSzvqEJpfiUhA" label="SystemModstamp" talendType="id_Date" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;">
+        <initialValue xmi:id="_RB7j9vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j9_pFEeSzvqEJpfiUhA" label="LastActivityDate" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;">
+        <initialValue xmi:id="_RB7j-PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j-fpFEeSzvqEJpfiUhA" label="FiscalQuarter" talendType="id_Integer">
+        <initialValue xmi:id="_RB7j-vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j-_pFEeSzvqEJpfiUhA" label="FiscalYear" talendType="id_Integer">
+        <initialValue xmi:id="_RB7j_PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j_fpFEeSzvqEJpfiUhA" label="Fiscal" length="6" talendType="id_String">
+        <initialValue xmi:id="_RB7j_vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7j__pFEeSzvqEJpfiUhA" label="SyncedQuoteId" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB7kAPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7kAfpFEeSzvqEJpfiUhA" label="Status_da_cirurgia__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB7kAvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7kA_pFEeSzvqEJpfiUhA" label="Motivo_da_rejeicao__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB7kBPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7kBfpFEeSzvqEJpfiUhA" label="Consumo__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB7kBvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7kB_pFEeSzvqEJpfiUhA" label="Data_de_faturamento__c" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;">
+        <initialValue xmi:id="_RB7kCPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7kCfpFEeSzvqEJpfiUhA" label="Paciente__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB7kCvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7kC_pFEeSzvqEJpfiUhA" label="Convenio__c" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB7kDPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB7kDfpFEeSzvqEJpfiUhA" label="Procedimento__c" length="4099" talendType="id_String">
+        <initialValue xmi:id="_RB8K0PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K0fpFEeSzvqEJpfiUhA" label="Entregar_material_em__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8K0vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K0_pFEeSzvqEJpfiUhA" label="Instrumentador__c" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB8K1PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K1fpFEeSzvqEJpfiUhA" label="Entregue_a__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8K1vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K1_pFEeSzvqEJpfiUhA" label="Prazo__c" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB8K2PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K2fpFEeSzvqEJpfiUhA" label="Valor_Total__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8K2vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K2_pFEeSzvqEJpfiUhA" label="Faturamento__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8K3PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K3fpFEeSzvqEJpfiUhA" label="Medico__c" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB8K3vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K3_pFEeSzvqEJpfiUhA" label="Desconto__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8K4PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K4fpFEeSzvqEJpfiUhA" label="Data_de_entrega__c" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;">
+        <initialValue xmi:id="_RB8K4vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K4_pFEeSzvqEJpfiUhA" label="Data_de_retirada__c" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;">
+        <initialValue xmi:id="_RB8K5PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K5fpFEeSzvqEJpfiUhA" label="N_ordem_de_compra_do_cliente__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8K5vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K5_pFEeSzvqEJpfiUhA" label="Resp_autorizacao__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8K6PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K6fpFEeSzvqEJpfiUhA" label="Hora_da_cirurgia__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8K6vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K6_pFEeSzvqEJpfiUhA" label="DANFE_Venda__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8K7PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K7fpFEeSzvqEJpfiUhA" label="dia_semana_cirurgia__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8K7vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K7_pFEeSzvqEJpfiUhA" label="Documento_de_Devolucao__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8K8PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K8fpFEeSzvqEJpfiUhA" label="Doacao__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8K8vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K8_pFEeSzvqEJpfiUhA" label="Fases_p_s_cirurgia__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8K9PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K9fpFEeSzvqEJpfiUhA" label="Pos_cir_rgico__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8K9vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K9_pFEeSzvqEJpfiUhA" label="Valor_consumido__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8K-PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K-fpFEeSzvqEJpfiUhA" label="Valor_total_consumido__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8K-vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K-_pFEeSzvqEJpfiUhA" label="Valor_a_ser_enviado__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8K_PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K_fpFEeSzvqEJpfiUhA" label="Valor_a_ser_enviado_total__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8K_vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8K__pFEeSzvqEJpfiUhA" label="Hospital__c" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB8LAPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LAfpFEeSzvqEJpfiUhA" label="Observa_es__c" length="131072" talendType="id_String">
+        <initialValue xmi:id="_RB8LAvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LA_pFEeSzvqEJpfiUhA" label="Data_Hora_de_in_cio_da_cirurgia__c" talendType="id_Date" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;">
+        <initialValue xmi:id="_RB8LBPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LBfpFEeSzvqEJpfiUhA" label="Data_Hora_de_t_rmino_da_cirurgia__c" talendType="id_Date" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;">
+        <initialValue xmi:id="_RB8LBvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LB_pFEeSzvqEJpfiUhA" label="Coment_rios_da_Cota_o__c" length="131072" talendType="id_String">
+        <initialValue xmi:id="_RB8LCPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LCfpFEeSzvqEJpfiUhA" label="Enviado_para_ERP__c" talendType="id_Boolean" nullable="false">
+        <initialValue xmi:id="_RB8LCvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LC_pFEeSzvqEJpfiUhA" label="AccountCNPJ__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8LDPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LDfpFEeSzvqEJpfiUhA" label="ConvenioCNPJ__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8LDvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LD_pFEeSzvqEJpfiUhA" label="MedicoID__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8LEPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LEfpFEeSzvqEJpfiUhA" label="InstrumentadorId__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8LEvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LE_pFEeSzvqEJpfiUhA" label="OwnerId__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8LFPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LFfpFEeSzvqEJpfiUhA" label="PrazoCodigoPrazo__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8LFvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LF_pFEeSzvqEJpfiUhA" label="MedicoOwnerID__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8LGPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8LGfpFEeSzvqEJpfiUhA" label="Flag_do_Process_Builder__c" talendType="id_Boolean" nullable="false">
+        <initialValue xmi:id="_RB8x4PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x4fpFEeSzvqEJpfiUhA" label="Pedido_do_cliente__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8x4vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x4_pFEeSzvqEJpfiUhA" label="Codigo_de_rastreio__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8x5PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x5fpFEeSzvqEJpfiUhA" label="Data_do_envio__c" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;">
+        <initialValue xmi:id="_RB8x5vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x5_pFEeSzvqEJpfiUhA" label="Metodo_de_envio__c" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8x6PpFEeSzvqEJpfiUhA"/>
+      </feature>
+    </tables>
+  </modules>
+  <modules xmi:id="_RB8x6fpFEeSzvqEJpfiUhA" id="_QlCzcPpFEeSzvqEJpfiUhA" label="OpportunityLineItem" moduleName="OpportunityLineItem">
+    <tables xmi:id="_RB8x6vpFEeSzvqEJpfiUhA" name="OpportunityLineItem" id="_QlCzcfpFEeSzvqEJpfiUhA" label="OpportunityLineItem">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x7fpFEeSzvqEJpfiUhA" label="OpportunityId" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB8x7vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x6_pFEeSzvqEJpfiUhA" label="Id" length="18" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB8x7PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x7_pFEeSzvqEJpfiUhA" label="SortOrder" talendType="id_Integer">
+        <initialValue xmi:id="_RB8x8PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x8fpFEeSzvqEJpfiUhA" label="PricebookEntryId" length="18" talendType="id_String">
+        <initialValue xmi:id="_RB8x8vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x8_pFEeSzvqEJpfiUhA" label="Quantity" length="12" talendType="id_Double" nullable="false">
+        <initialValue xmi:id="_RB8x9PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x9fpFEeSzvqEJpfiUhA" label="Discount" length="5" talendType="id_Double">
+        <initialValue xmi:id="_RB8x9vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x9_pFEeSzvqEJpfiUhA" label="Subtotal" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8x-PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x-fpFEeSzvqEJpfiUhA" label="TotalPrice" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8x-vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x-_pFEeSzvqEJpfiUhA" label="UnitPrice" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8x_PpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x_fpFEeSzvqEJpfiUhA" label="ListPrice" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8x_vpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8x__pFEeSzvqEJpfiUhA" label="ServiceDate" talendType="id_Date" pattern="&quot;yyyy-MM-dd&quot;">
+        <initialValue xmi:id="_RB8yAPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yAfpFEeSzvqEJpfiUhA" label="Description" length="255" talendType="id_String">
+        <initialValue xmi:id="_RB8yAvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yA_pFEeSzvqEJpfiUhA" label="CreatedDate" talendType="id_Date" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;">
+        <initialValue xmi:id="_RB8yBPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yBfpFEeSzvqEJpfiUhA" label="CreatedById" length="18" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB8yBvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yB_pFEeSzvqEJpfiUhA" label="LastModifiedDate" talendType="id_Date" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;">
+        <initialValue xmi:id="_RB8yCPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yCfpFEeSzvqEJpfiUhA" label="LastModifiedById" length="18" talendType="id_String" nullable="false">
+        <initialValue xmi:id="_RB8yCvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yC_pFEeSzvqEJpfiUhA" label="SystemModstamp" talendType="id_Date" nullable="false" pattern="&quot;yyyy-MM-dd'T'HH:mm:ss'.000Z'&quot;">
+        <initialValue xmi:id="_RB8yDPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yDfpFEeSzvqEJpfiUhA" label="IsDeleted" talendType="id_Boolean" nullable="false">
+        <initialValue xmi:id="_RB8yDvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yD_pFEeSzvqEJpfiUhA" label="Valor_unitario_com_desconto__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8yEPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yEfpFEeSzvqEJpfiUhA" label="Quantidade_cotada__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8yEvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yE_pFEeSzvqEJpfiUhA" label="Quantidade_consumida__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8yFPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yFfpFEeSzvqEJpfiUhA" label="Valor_consumido__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8yFvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yF_pFEeSzvqEJpfiUhA" label="Valor_a_ser_enviado__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8yGPpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yGfpFEeSzvqEJpfiUhA" label="Preco__c" length="18" talendType="id_Double">
+        <initialValue xmi:id="_RB8yGvpFEeSzvqEJpfiUhA"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RB8yG_pFEeSzvqEJpfiUhA" label="Product2Name__c" length="1300" talendType="id_String">
+        <initialValue xmi:id="_RB8yHPpFEeSzvqEJpfiUhA"/>
+      </feature>
+    </tables>
+  </modules>
+</TalendMetadata:SalesforceSchemaConnection>

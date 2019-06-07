@@ -1,0 +1,333 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x741d14f3, pid=3080, tid=5768
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_91-b14) (build 1.8.0_91-b14)
+# Java VM: Java HotSpot(TM) Client VM (25.91-b14 mixed mode windows-x86 )
+# Problematic frame:
+# C  0x741d14f3
+#
+# Core dump written. Default location: D:\Integração Salesforce\Ossis_v1\Integracao\hs_err_pid3080.mdmp
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00f3c800):  JavaThread "main" [_thread_in_native, id=5768, stack(0x00920000,0x00970000)]
+
+siginfo: ExceptionCode=0xc0000005, ExceptionInformation=0x00000008 0x741d14f3
+
+Registers:
+EAX=0x741d14f3, EBX=0x0096d050, ECX=0x0096cfb0, EDX=0x0096cfc8
+ESP=0x0096cfa8, EBP=0x0096cfd4, ESI=0x00000000, EDI=0x00000000
+EIP=0x741d14f3, EFLAGS=0x00010206
+
+Top of Stack: (sp=0x0096cfa8)
+0x0096cfa8:   751c1373 0096cfb0 00000018 000000c4
+0x0096cfb8:   0096cfc8 00000000 00000000 00000000
+0x0096cfc8:   007e007c 44c80850 00000000 0096d008
+0x0096cfd8:   6b6da28f 00100000 00000000 000000c4
+0x0096cfe8:   0096d0b8 00000000 00000000 44c80850
+0x0096cff8:   44c80818 00000000 00000000 44c807d0
+0x0096d008:   0096d024 6b6da15e 00000000 0000000a
+0x0096d018:   00000000 0096d054 0096d050 0096d088 
+
+Instructions: (pc=0x741d14f3)
+0x741d14d3:   
+[error occurred during error reporting (printing registers, top of stack, instructions near pc), id 0xc0000005]
+
+Register to memory mapping:
+
+EAX=0x741d14f3 is an unknown value
+EBX=0x0096d050 is pointing into the stack for thread: 0x00f3c800
+ECX=0x0096cfb0 is pointing into the stack for thread: 0x00f3c800
+EDX=0x0096cfc8 is pointing into the stack for thread: 0x00f3c800
+ESP=0x0096cfa8 is pointing into the stack for thread: 0x00f3c800
+EBP=0x0096cfd4 is pointing into the stack for thread: 0x00f3c800
+ESI=0x00000000 is an unknown value
+EDI=0x00000000 is an unknown value
+
+
+Stack: [0x00920000,0x00970000],  sp=0x0096cfa8,  free space=307k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x741d14f3
+C  [fwpuclnt.dll+0xa28f]
+C  [fwpuclnt.dll+0xa15e]
+C  [fwpuclnt.dll+0xa643]
+C  [fwpuclnt.dll+0x2e71]
+C  [fwpuclnt.dll+0x2dcb]
+C  [WS2_32.dll+0x6233]
+C  [WS2_32.dll+0x50cd]
+C  [WS2_32.dll+0x5354]
+C  [WS2_32.dll+0x6485]
+C  [WS2_32.dll+0x4a99]
+C  [WS2_32.dll+0x4303]
+C  [net.dll+0x32df]
+j  java.net.Inet6AddressImpl.lookupAllHostAddr(Ljava/lang/String;)[Ljava/net/InetAddress;+0
+j  java.net.InetAddress$2.lookupAllHostAddr(Ljava/lang/String;)[Ljava/net/InetAddress;+4
+j  java.net.InetAddress.getAddressesFromNameService(Ljava/lang/String;Ljava/net/InetAddress;)[Ljava/net/InetAddress;+51
+j  java.net.InetAddress.getLocalHost()Ljava/net/InetAddress;+90
+j  javax.crypto.JarVerifier.getSystemEntropy()[B+91
+j  javax.crypto.JarVerifier.testSignatures(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;)V+3
+j  javax.crypto.JarVerifier.access$400(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;)V+2
+j  javax.crypto.JarVerifier$1.run()Ljava/lang/Void;+71
+j  javax.crypto.JarVerifier$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1594e5]
+V  [jvm.dll+0x21f0ae]
+V  [jvm.dll+0x15957e]
+V  [jvm.dll+0x109def]
+C  [java.dll+0x1047]
+j  javax.crypto.JarVerifier.<clinit>()V+7
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1594e5]
+V  [jvm.dll+0x21f0ae]
+V  [jvm.dll+0x15957e]
+V  [jvm.dll+0xbefeb]
+V  [jvm.dll+0xc01a7]
+V  [jvm.dll+0xc02f8]
+V  [jvm.dll+0x84446]
+V  [jvm.dll+0x85442]
+V  [jvm.dll+0x809f7]
+j  javax.crypto.JceSecurity.loadPolicies(Ljava/io/File;Ljavax/crypto/CryptoPermissions;Ljavax/crypto/CryptoPermissions;)V+146
+j  javax.crypto.JceSecurity.setupJurisdictionPolicies()V+130
+j  javax.crypto.JceSecurity.access$000()V+0
+j  javax.crypto.JceSecurity$1.run()Ljava/lang/Object;+0
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1594e5]
+V  [jvm.dll+0x21f0ae]
+V  [jvm.dll+0x15957e]
+V  [jvm.dll+0x109def]
+C  [java.dll+0x1047]
+j  javax.crypto.JceSecurity.<clinit>()V+49
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1594e5]
+V  [jvm.dll+0x21f0ae]
+V  [jvm.dll+0x15957e]
+V  [jvm.dll+0xbefeb]
+V  [jvm.dll+0xc01a7]
+V  [jvm.dll+0xc02f8]
+V  [jvm.dll+0x84446]
+V  [jvm.dll+0x85442]
+V  [jvm.dll+0x809f7]
+j  javax.crypto.SecretKeyFactory.nextSpi(Ljavax/crypto/SecretKeyFactorySpi;)Ljavax/crypto/SecretKeyFactorySpi;+66
+j  javax.crypto.SecretKeyFactory.<init>(Ljava/lang/String;)V+39
+j  javax.crypto.SecretKeyFactory.getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;+5
+j  routines.system.PasswordEncryptUtil.getSecretKey()Ljavax/crypto/SecretKey;+27
+j  routines.system.PasswordEncryptUtil.decryptPassword(Ljava/lang/String;)Ljava/lang/String;+21
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSalesforceInput_1Process(Ljava/util/Map;)V+725
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSetGlobalVar_1Process(Ljava/util/Map;)V+261
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSalesforceInput_2Process(Ljava/util/Map;)V+88
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.runJobInTOS([Ljava/lang/String;)I+583
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.runJob([Ljava/lang/String;)[[Ljava/lang/String;+2
+j  ossis_v1.integracao_0_1.Integracao.tRunJob_1Process(Ljava/util/Map;)V+518
+j  ossis_v1.integracao_0_1.Integracao.runJobInTOS([Ljava/lang/String;)I+574
+j  ossis_v1.integracao_0_1.Integracao.main([Ljava/lang/String;)V+10
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1594e5]
+V  [jvm.dll+0x21f0ae]
+V  [jvm.dll+0x15957e]
+V  [jvm.dll+0xdb4f7]
+V  [jvm.dll+0xe3a8f]
+C  [java.exe+0x228d]
+C  [java.exe+0xae9f]
+C  [java.exe+0xaf29]
+C  [kernel32.dll+0x1338a]
+C  [ntdll.dll+0x39902]
+C  [ntdll.dll+0x398d5]
+C  0x00000000
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.net.Inet6AddressImpl.lookupAllHostAddr(Ljava/lang/String;)[Ljava/net/InetAddress;+0
+j  java.net.InetAddress$2.lookupAllHostAddr(Ljava/lang/String;)[Ljava/net/InetAddress;+4
+j  java.net.InetAddress.getAddressesFromNameService(Ljava/lang/String;Ljava/net/InetAddress;)[Ljava/net/InetAddress;+51
+j  java.net.InetAddress.getLocalHost()Ljava/net/InetAddress;+90
+j  javax.crypto.JarVerifier.getSystemEntropy()[B+91
+j  javax.crypto.JarVerifier.testSignatures(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;)V+3
+j  javax.crypto.JarVerifier.access$400(Ljava/security/cert/X509Certificate;Ljava/security/cert/CertificateFactory;)V+2
+j  javax.crypto.JarVerifier$1.run()Ljava/lang/Void;+71
+j  javax.crypto.JarVerifier$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;+0
+j  javax.crypto.JarVerifier.<clinit>()V+7
+v  ~StubRoutines::call_stub
+j  javax.crypto.JceSecurity.loadPolicies(Ljava/io/File;Ljavax/crypto/CryptoPermissions;Ljavax/crypto/CryptoPermissions;)V+146
+j  javax.crypto.JceSecurity.setupJurisdictionPolicies()V+130
+j  javax.crypto.JceSecurity.access$000()V+0
+j  javax.crypto.JceSecurity$1.run()Ljava/lang/Object;+0
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;)Ljava/lang/Object;+0
+j  javax.crypto.JceSecurity.<clinit>()V+49
+v  ~StubRoutines::call_stub
+j  javax.crypto.SecretKeyFactory.nextSpi(Ljavax/crypto/SecretKeyFactorySpi;)Ljavax/crypto/SecretKeyFactorySpi;+66
+j  javax.crypto.SecretKeyFactory.<init>(Ljava/lang/String;)V+39
+j  javax.crypto.SecretKeyFactory.getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;+5
+j  routines.system.PasswordEncryptUtil.getSecretKey()Ljavax/crypto/SecretKey;+27
+j  routines.system.PasswordEncryptUtil.decryptPassword(Ljava/lang/String;)Ljava/lang/String;+21
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSalesforceInput_1Process(Ljava/util/Map;)V+725
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSetGlobalVar_1Process(Ljava/util/Map;)V+261
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSalesforceInput_2Process(Ljava/util/Map;)V+88
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.runJobInTOS([Ljava/lang/String;)I+583
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.runJob([Ljava/lang/String;)[[Ljava/lang/String;+2
+j  ossis_v1.integracao_0_1.Integracao.tRunJob_1Process(Ljava/util/Map;)V+518
+j  ossis_v1.integracao_0_1.Integracao.runJobInTOS([Ljava/lang/String;)I+574
+j  ossis_v1.integracao_0_1.Integracao.main([Ljava/lang/String;)V+10
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x43c4f400 JavaThread "Service Thread" daemon [_thread_blocked, id=2408, stack(0x44240000,0x44290000)]
+  0x43c25800 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=5592, stack(0x440a0000,0x440f0000)]
+  0x43c24000 JavaThread "Attach Listener" daemon [_thread_blocked, id=5588, stack(0x44150000,0x441a0000)]
+  0x43c2c800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5584, stack(0x43fa0000,0x43ff0000)]
+  0x43c16400 JavaThread "Finalizer" daemon [_thread_blocked, id=4780, stack(0x43e40000,0x43e90000)]
+  0x43bf1400 JavaThread "Reference Handler" daemon [_thread_blocked, id=5604, stack(0x008a0000,0x008f0000)]
+=>0x00f3c800 JavaThread "main" [_thread_in_native, id=5768, stack(0x00920000,0x00970000)]
+
+Other Threads:
+  0x43bea400 VMThread [stack: 0x033b0000,0x03400000] [id=5640]
+  0x43c62800 WatcherThread [stack: 0x43df0000,0x43e40000] [id=3500]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 78656K, used 8394K [0x03400000, 0x08950000, 0x18950000)
+  eden space 69952K,  12% used [0x03400000, 0x03c32a38, 0x07850000)
+  from space 8704K,   0% used [0x07850000, 0x07850000, 0x080d0000)
+  to   space 8704K,   0% used [0x080d0000, 0x080d0000, 0x08950000)
+ tenured generation   total 174784K, used 0K [0x18950000, 0x23400000, 0x43400000)
+   the space 174784K,   0% used [0x18950000, 0x18950000, 0x18950200, 0x23400000)
+ Metaspace       used 3470K, capacity 3538K, committed 3648K, reserved 4480K
+
+Card table byte_map: [0x43400000,0x43610000] byte_map_base: 0x433e6000
+
+Polling page: 0x001d0000
+
+CodeCache: size=32768Kb used=908Kb max_used=908Kb free=31859Kb
+ bounds [0x01380000, 0x01468000, 0x03380000]
+ total_blobs=298 nmethods=150 adapters=79
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.381 Thread 0x43c25800  146             sun.nio.cs.SingleByte$Encoder::encode (32 bytes)
+Event: 0.382 Thread 0x43c25800 nmethod 146 0x014624c8 code [0x014625d0, 0x014626c0]
+Event: 0.382 Thread 0x43c25800  147             java.lang.ThreadLocal::get (38 bytes)
+Event: 0.382 Thread 0x43c25800 nmethod 147 0x014627c8 code [0x014628e0, 0x014629e4]
+Event: 0.382 Thread 0x43c25800  148             java.lang.ThreadLocal$ThreadLocalMap::access$000 (6 bytes)
+Event: 0.382 Thread 0x43c25800 nmethod 148 0x01462b08 code [0x01462c00, 0x01462c8c]
+Event: 0.382 Thread 0x43c25800  149             java.lang.ThreadLocal$ThreadLocalMap::getEntry (42 bytes)
+Event: 0.382 Thread 0x43c25800 nmethod 149 0x01462d08 code [0x01462e10, 0x01462efc]
+Event: 0.382 Thread 0x43c25800  150             java.lang.ThreadLocal::getMap (5 bytes)
+Event: 0.382 Thread 0x43c25800 nmethod 150 0x01463008 code [0x01463100, 0x01463180]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (8 events):
+Event: 0.064 Thread 0x00f3c800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x03406ea8) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u91\6644\hotspot\src\share\v4(M4Uk°?
+Event: 0.064 Thread 0x00f3c800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x03407178) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u91\6644\hotspot\src\share\vm\prims\jni.cpp, l›(3õôÁ?
+Event: 0.140 Thread 0x00f3c800 Exception <a 'java/security/PrivilegedActionException'> (0x03497238) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u91\6644\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
+Event: 0.140 Thread 0x00f3c800 Exception <a 'java/security/PrivilegedActionException'> (0x03497438) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u91\6644\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
+Event: 0.176 Thread 0x00f3c800 Exception <a 'java/security/PrivilegedActionException'> (0x036e0588) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u91\6644\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
+Event: 0.176 Thread 0x00f3c800 Exception <a 'java/security/PrivilegedActionException'> (0x036e0788) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u91\6644\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
+Event: 0.177 Thread 0x00f3c800 Exception <a 'java/security/PrivilegedActionException'> (0x036e4570) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u91\6644\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
+Event: 0.177 Thread 0x00f3c800 Exception <a 'java/security/PrivilegedActionException'> (0x036e4770) thrown at [C:\re\workspace\8-2-build-windows-i586-cygwin\jdk8u91\6644\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
+
+Events (10 events):
+Event: 0.382 loading class java/net/InetAddress$2
+Event: 0.382 loading class sun/net/spi/nameservice/NameService
+Event: 0.382 loading class sun/net/spi/nameservice/NameService done
+Event: 0.382 loading class java/net/InetAddress$2 done
+Event: 0.385 loading class java/net/Inet4Address
+Event: 0.385 loading class java/net/Inet4Address done
+Event: 0.385 loading class java/net/Inet6Address
+Event: 0.385 loading class java/net/Inet6Address done
+Event: 0.386 loading class java/net/Inet6Address$Inet6AddressHolder
+Event: 0.386 loading class java/net/Inet6Address$Inet6AddressHolder done
+
+
+Dynamic libraries:
+0x009e0000 - 0x00a13000 	C:\ProgramData\Oracle\Java\javapath\java.exe
+0x770e0000 - 0x77260000 	C:\Windows\SysWOW64\ntdll.dll
+0x760d0000 - 0x761e0000 	C:\Windows\syswow64\kernel32.dll
+0x751b0000 - 0x751f7000 	C:\Windows\syswow64\KERNELBASE.dll
+0x75090000 - 0x75131000 	C:\Windows\syswow64\ADVAPI32.dll
+0x76270000 - 0x7631c000 	C:\Windows\syswow64\msvcrt.dll
+0x76330000 - 0x76349000 	C:\Windows\SysWOW64\sechost.dll
+0x75fe0000 - 0x760d0000 	C:\Windows\syswow64\RPCRT4.dll
+0x74a30000 - 0x74a90000 	C:\Windows\syswow64\SspiCli.dll
+0x74a20000 - 0x74a2c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x74d50000 - 0x74e50000 	C:\Windows\syswow64\USER32.dll
+0x761e0000 - 0x76270000 	C:\Windows\syswow64\GDI32.dll
+0x76480000 - 0x7648a000 	C:\Windows\syswow64\LPK.dll
+0x74ab0000 - 0x74b4d000 	C:\Windows\syswow64\USP10.dll
+0x743f0000 - 0x7458e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+0x75150000 - 0x751a7000 	C:\Windows\syswow64\SHLWAPI.dll
+0x76490000 - 0x764f0000 	C:\Windows\system32\IMM32.DLL
+0x763a0000 - 0x7646c000 	C:\Windows\syswow64\MSCTF.dll
+0x74330000 - 0x743ef000 	C:\Program Files (x86)\Java\jre1.8.0_91\bin\msvcr100.dll
+0x70310000 - 0x706da000 	C:\Program Files (x86)\Java\jre1.8.0_91\bin\client\jvm.dll
+0x73a60000 - 0x73a67000 	C:\Windows\system32\WSOCK32.dll
+0x75320000 - 0x75355000 	C:\Windows\syswow64\WS2_32.dll
+0x76320000 - 0x76326000 	C:\Windows\syswow64\NSI.dll
+0x73e60000 - 0x73e92000 	C:\Windows\system32\WINMM.dll
+0x73a80000 - 0x73a89000 	C:\Windows\system32\VERSION.dll
+0x770b0000 - 0x770b5000 	C:\Windows\syswow64\PSAPI.DLL
+0x74320000 - 0x7432c000 	C:\Program Files (x86)\Java\jre1.8.0_91\bin\verify.dll
+0x742f0000 - 0x74311000 	C:\Program Files (x86)\Java\jre1.8.0_91\bin\java.dll
+0x742d0000 - 0x742e3000 	C:\Program Files (x86)\Java\jre1.8.0_91\bin\zip.dll
+0x75390000 - 0x75fdb000 	C:\Windows\syswow64\SHELL32.dll
+0x76500000 - 0x7665d000 	C:\Windows\syswow64\ole32.dll
+0x766f0000 - 0x766fb000 	C:\Windows\syswow64\profapi.dll
+0x74290000 - 0x742b0000 	C:\Program Files (x86)\Java\jre1.8.0_91\bin\sunec.dll
+0x742b0000 - 0x742c6000 	C:\Program Files (x86)\Java\jre1.8.0_91\bin\net.dll
+0x73920000 - 0x7395c000 	C:\Windows\system32\mswsock.dll
+0x71b10000 - 0x71b16000 	C:\Windows\System32\wship6.dll
+0x6b800000 - 0x6b810000 	C:\Windows\system32\NLAapi.dll
+0x6b7a0000 - 0x6b7e4000 	C:\Windows\system32\DNSAPI.dll
+0x6b710000 - 0x6b718000 	C:\Windows\System32\winrnr.dll
+0x73910000 - 0x73915000 	C:\Windows\System32\wshtcpip.dll
+0x719c0000 - 0x719dc000 	C:\Windows\system32\IPHLPAPI.DLL
+0x719b0000 - 0x719b7000 	C:\Windows\system32\WINNSI.DLL
+0x6b6c0000 - 0x6b6c6000 	C:\Windows\system32\rasadhlp.dll
+0x6b6d0000 - 0x6b708000 	C:\Windows\System32\fwpuclnt.dll
+0x73f60000 - 0x7404b000 	C:\Windows\system32\DBGHELP.DLL
+
+VM Arguments:
+jvm_args: -Xms256M -Xmx1024M 
+java_command: ossis_v1.integracao_0_1.Integracao --context=Default
+java_class_path (initial): .;../lib/routines.jar;../lib/commons-logging-1.1.1.jar;../lib/commons-logging-1.1.1.jar;../lib/mail-1.4.jar;../lib/log4j-1.2.16.jar;../lib/woodstox-core-asl-4.4.1.jar;../lib/mail-1.4.jar;../lib/stax2-api-3.1.4.jar;../lib/geronimo-stax-api_1.0_spec-1.0.1.jar;../lib/woodstox-core-asl-4.4.1.jar;../lib/log4j-1.2.15.jar;../lib/geronimo-stax-api_1.0_spec-1.0.1.jar;../lib/commons-collections-3.2.jar;../lib/stax2-api-3.1.4.jar;../lib/commons-httpclient-3.1.jar;../lib/talend_file_enhanced_20070724.jar;../lib/commons-codec-1.6.jar;../lib/httpcore-4.2.1.jar;../lib/trove.jar;../lib/wsdl4j-1.6.3.jar;../lib/commons-httpclient-3.1.jar;../lib/wsdl4j-1.6.3.jar;../lib/axis2-transport-http-1.6.2.jar;../lib/activation-1.1.jar;../lib/salesforceCRMManagement.jar;../lib/axiom-api-1.2.13.jar;../lib/axis2-kernel-1.6.2.jar;../lib/axis2-kernel-1.6.2.jar;../lib/axiom-api-1.2.13.jar;../lib/axis2-adb-1.6.2.jar;../lib/dom4j-1.6.1.jar;../lib/axis2-adb-1.6.2.jar;../lib/jboss-serialization.jar;../lib/axis2-transport-http-1.6.2.jar;../lib/talendcsv.jar;../lib/axis2-transport-local-1.6.2.jar;../lib/xmlschema-core-2.0.1.jar;../lib/activation-1.1.jar;../lib/commons-codec-1.6.jar;../lib/neethi-3.0.1.jar;../lib/salesforceCRMManagement.jar;../lib/neethi-3.0.1.jar;../lib/httpcore-4.2.1.jar;../lib/axiom-impl-1.2.13.jar;../lib/advancedPersistentLookupLib-1.0.jar;../lib/axis2-transport-local-1.6.2.jar;../lib/axiom-impl-1.2.13.jar;../lib/xmlschema-core-2.0.1.jar;integracao_0_1.jar;createcsv_0_1.jar;update_flag_0_1.jar;impsf_exptempcsv_0_1.jar;
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\SQLData\x86\100\Tools\Binn\;D:\SQLData\100\Tools\Binn\;D:\SQLData\100\DTS\Binn\;D:\SQLData\x86\100\Tools\Binn\VSShell\Common7\IDE\;D:\SQLData\x86\100\DTS\Binn\;d:\SQLData\x86\90\Tools\binn\;C:\Program Files\Dell\SysMgt\iSM\shared\bin;C:\Program Files\Dell\SysMgt\iSM\ismeng\bin;C:\Program Files\Dell\SysMgt\iSM\ismmod\bin
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows Server 2008 R2 , 64 bit Build 7601 (6.1.7601.23455)
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 45 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 33507884k(29738400k free), swap 67013908k(63019892k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.91-b14) for windows-x86 JRE (1.8.0_91-b14), built on Apr  1 2016 01:01:28 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Wed Jun 22 10:22:09 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

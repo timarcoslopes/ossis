@@ -1,0 +1,323 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x73f314e3, pid=5492, tid=0x000015ac
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_141-b15) (build 1.8.0_141-b15)
+# Java VM: Java HotSpot(TM) Client VM (25.141-b15 mixed mode windows-x86 )
+# Problematic frame:
+# C  0x73f314e3
+#
+# Core dump written. Default location: D:\Integração Salesforce\Ossis_v1\Integracao\hs_err_pid5492.mdmp
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0097c800):  JavaThread "main" [_thread_in_native, id=5548, stack(0x00920000,0x00970000)]
+
+siginfo: ExceptionCode=0xc0000005, ExceptionInformation=0x00000008 0x73f314e3
+
+Registers:
+EAX=0x73f314e3, EBX=0x0096e310, ECX=0x0096e270, EDX=0x0096e288
+ESP=0x0096e268, EBP=0x0096e294, ESI=0x00000000, EDI=0x00000000
+EIP=0x73f314e3, EFLAGS=0x00010202
+
+Top of Stack: (sp=0x0096e268)
+0x0096e268:   76ff1373 0096e270 00000018 000000c4
+0x0096e278:   0096e288 00000000 00000000 00000000
+0x0096e288:   007e007c 454c0850 00000000 0096e2c8
+0x0096e298:   70a1a28f 00100000 00000000 000000c4
+0x0096e2a8:   0096e378 00000000 00000000 454c0850
+0x0096e2b8:   454c0818 00000000 00000000 454c07d0
+0x0096e2c8:   0096e2e4 70a1a15e 00000000 0000000a
+0x0096e2d8:   00000000 0096e314 0096e310 0096e348 
+
+Instructions: (pc=0x73f314e3)
+0x73f314c3:   
+[error occurred during error reporting (printing registers, top of stack, instructions near pc), id 0xc0000005]
+
+Register to memory mapping:
+
+EAX=0x73f314e3 is an unknown value
+EBX=0x0096e310 is pointing into the stack for thread: 0x0097c800
+ECX=0x0096e270 is pointing into the stack for thread: 0x0097c800
+EDX=0x0096e288 is pointing into the stack for thread: 0x0097c800
+ESP=0x0096e268 is pointing into the stack for thread: 0x0097c800
+EBP=0x0096e294 is pointing into the stack for thread: 0x0097c800
+ESI=0x00000000 is an unknown value
+EDI=0x00000000 is an unknown value
+
+
+Stack: [0x00920000,0x00970000],  sp=0x0096e268,  free space=312k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0x73f314e3
+C  [fwpuclnt.dll+0xa28f]
+C  [fwpuclnt.dll+0xa15e]
+C  [fwpuclnt.dll+0xa643]
+C  [fwpuclnt.dll+0x2e71]
+C  [fwpuclnt.dll+0x2dcb]
+C  [WS2_32.dll+0x6233]
+C  [WS2_32.dll+0x50cd]
+C  [WS2_32.dll+0x5354]
+C  [WS2_32.dll+0x6485]
+C  [WS2_32.dll+0x4a99]
+C  [WS2_32.dll+0x4303]
+C  [net.dll+0x33a2]
+j  java.net.Inet6AddressImpl.lookupAllHostAddr(Ljava/lang/String;)[Ljava/net/InetAddress;+0
+j  java.net.InetAddress$2.lookupAllHostAddr(Ljava/lang/String;)[Ljava/net/InetAddress;+4
+j  java.net.InetAddress.getAddressesFromNameService(Ljava/lang/String;Ljava/net/InetAddress;)[Ljava/net/InetAddress;+51
+j  java.net.InetAddress.getAllByName0(Ljava/lang/String;Ljava/net/InetAddress;Z)[Ljava/net/InetAddress;+29
+j  java.net.InetAddress.getAllByName(Ljava/lang/String;Ljava/net/InetAddress;)[Ljava/net/InetAddress;+383
+j  java.net.InetAddress.getAllByName(Ljava/lang/String;)[Ljava/net/InetAddress;+2
+j  java.net.InetAddress.getByName(Ljava/lang/String;)Ljava/net/InetAddress;+1
+j  org.apache.commons.httpclient.protocol.ReflectionSocketFactory.createSocket(Ljava/lang/String;Ljava/lang/String;ILjava/net/InetAddress;II)Ljava/net/Socket;+133
+j  org.apache.commons.httpclient.protocol.SSLProtocolSocketFactory.createSocket(Ljava/lang/String;ILjava/net/InetAddress;ILorg/apache/commons/httpclient/params/HttpConnectionParams;)Ljava/net/Socket;+46
+j  org.apache.commons.httpclient.HttpConnection.open()V+182
+j  org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open()V+11
+j  org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(Lorg/apache/commons/httpclient/HttpMethod;)V+83
+j  org.apache.commons.httpclient.HttpMethodDirector.executeMethod(Lorg/apache/commons/httpclient/HttpMethod;)V+288
+j  org.apache.commons.httpclient.HttpClient.executeMethod(Lorg/apache/commons/httpclient/HostConfiguration;Lorg/apache/commons/httpclient/HttpMethod;Lorg/apache/commons/httpclient/HttpState;)I+114
+j  org.apache.axis2.transport.http.AbstractHTTPSender.executeMethod(Lorg/apache/commons/httpclient/HttpClient;Lorg/apache/axis2/context/MessageContext;Ljava/net/URL;Lorg/apache/commons/httpclient/HttpMethod;)V+138
+j  org.apache.axis2.transport.http.HTTPSender.sendViaPost(Lorg/apache/axis2/context/MessageContext;Ljava/net/URL;Ljava/lang/String;)V+173
+j  org.apache.axis2.transport.http.HTTPSender.send(Lorg/apache/axis2/context/MessageContext;Ljava/net/URL;Ljava/lang/String;)V+74
+j  org.apache.axis2.transport.http.CommonsHTTPTransportSender.writeMessageWithCommons(Lorg/apache/axis2/context/MessageContext;Lorg/apache/axis2/addressing/EndpointReference;Lorg/apache/axiom/om/OMOutputFormat;)V+109
+j  org.apache.axis2.transport.http.CommonsHTTPTransportSender.invoke(Lorg/apache/axis2/context/MessageContext;)Lorg/apache/axis2/engine/Handler$InvocationResponse;+325
+j  org.apache.axis2.engine.AxisEngine.send(Lorg/apache/axis2/context/MessageContext;)V+189
+j  org.apache.axis2.description.OutInAxisOperationClient.send(Lorg/apache/axis2/context/MessageContext;)Lorg/apache/axis2/context/MessageContext;+71
+j  org.apache.axis2.description.OutInAxisOperationClient.executeImpl(Z)V+381
+j  org.apache.axis2.client.OperationClient.execute(Z)V+13
+j  com.salesforce.soap.partner.SforceServiceStub.login(Lcom/salesforce/soap/partner/Login;Lcom/salesforce/soap/partner/LoginScopeHeader;Lcom/salesforce/soap/partner/CallOptions;)Lcom/salesforce/soap/partner/LoginResponse;+209
+j  org.talend.salesforce.SforceBasicConnection.renewSession()V+24
+j  org.talend.salesforce.SforceBasicConnection.init()V+92
+j  org.talend.salesforce.SforceBasicConnection.<init>(Lorg/talend/salesforce/SforceBasicConnection$Builder;)V+57
+j  org.talend.salesforce.SforceBasicConnection.<init>(Lorg/talend/salesforce/SforceBasicConnection$Builder;Lorg/talend/salesforce/SforceBasicConnection$1;)V+2
+j  org.talend.salesforce.SforceBasicConnection$Builder.build()Lorg/talend/salesforce/SforceBasicConnection;+6
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSalesforceInput_1Process(Ljava/util/Map;)V+756
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSetGlobalVar_1Process(Ljava/util/Map;)V+261
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSalesforceInput_2Process(Ljava/util/Map;)V+88
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.runJobInTOS([Ljava/lang/String;)I+583
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.runJob([Ljava/lang/String;)[[Ljava/lang/String;+2
+j  ossis_v1.integracao_0_1.Integracao.tRunJob_1Process(Ljava/util/Map;)V+518
+j  ossis_v1.integracao_0_1.Integracao.runJobInTOS([Ljava/lang/String;)I+574
+j  ossis_v1.integracao_0_1.Integracao.main([Ljava/lang/String;)V+10
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x15af45]
+V  [jvm.dll+0x2213ae]
+V  [jvm.dll+0x15afde]
+V  [jvm.dll+0xdcb97]
+V  [jvm.dll+0xe512f]
+C  [java.exe+0x229e]
+C  [java.exe+0xae9f]
+C  [java.exe+0xaf29]
+C  [kernel32.dll+0x1336a]
+C  [ntdll.dll+0x39902]
+C  [ntdll.dll+0x398d5]
+C  0x00000000
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.net.Inet6AddressImpl.lookupAllHostAddr(Ljava/lang/String;)[Ljava/net/InetAddress;+0
+j  java.net.InetAddress$2.lookupAllHostAddr(Ljava/lang/String;)[Ljava/net/InetAddress;+4
+j  java.net.InetAddress.getAddressesFromNameService(Ljava/lang/String;Ljava/net/InetAddress;)[Ljava/net/InetAddress;+51
+j  java.net.InetAddress.getAllByName0(Ljava/lang/String;Ljava/net/InetAddress;Z)[Ljava/net/InetAddress;+29
+j  java.net.InetAddress.getAllByName(Ljava/lang/String;Ljava/net/InetAddress;)[Ljava/net/InetAddress;+383
+j  java.net.InetAddress.getAllByName(Ljava/lang/String;)[Ljava/net/InetAddress;+2
+j  java.net.InetAddress.getByName(Ljava/lang/String;)Ljava/net/InetAddress;+1
+j  org.apache.commons.httpclient.protocol.ReflectionSocketFactory.createSocket(Ljava/lang/String;Ljava/lang/String;ILjava/net/InetAddress;II)Ljava/net/Socket;+133
+j  org.apache.commons.httpclient.protocol.SSLProtocolSocketFactory.createSocket(Ljava/lang/String;ILjava/net/InetAddress;ILorg/apache/commons/httpclient/params/HttpConnectionParams;)Ljava/net/Socket;+46
+j  org.apache.commons.httpclient.HttpConnection.open()V+182
+j  org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open()V+11
+j  org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(Lorg/apache/commons/httpclient/HttpMethod;)V+83
+j  org.apache.commons.httpclient.HttpMethodDirector.executeMethod(Lorg/apache/commons/httpclient/HttpMethod;)V+288
+j  org.apache.commons.httpclient.HttpClient.executeMethod(Lorg/apache/commons/httpclient/HostConfiguration;Lorg/apache/commons/httpclient/HttpMethod;Lorg/apache/commons/httpclient/HttpState;)I+114
+j  org.apache.axis2.transport.http.AbstractHTTPSender.executeMethod(Lorg/apache/commons/httpclient/HttpClient;Lorg/apache/axis2/context/MessageContext;Ljava/net/URL;Lorg/apache/commons/httpclient/HttpMethod;)V+138
+j  org.apache.axis2.transport.http.HTTPSender.sendViaPost(Lorg/apache/axis2/context/MessageContext;Ljava/net/URL;Ljava/lang/String;)V+173
+j  org.apache.axis2.transport.http.HTTPSender.send(Lorg/apache/axis2/context/MessageContext;Ljava/net/URL;Ljava/lang/String;)V+74
+j  org.apache.axis2.transport.http.CommonsHTTPTransportSender.writeMessageWithCommons(Lorg/apache/axis2/context/MessageContext;Lorg/apache/axis2/addressing/EndpointReference;Lorg/apache/axiom/om/OMOutputFormat;)V+109
+j  org.apache.axis2.transport.http.CommonsHTTPTransportSender.invoke(Lorg/apache/axis2/context/MessageContext;)Lorg/apache/axis2/engine/Handler$InvocationResponse;+325
+j  org.apache.axis2.engine.AxisEngine.send(Lorg/apache/axis2/context/MessageContext;)V+189
+j  org.apache.axis2.description.OutInAxisOperationClient.send(Lorg/apache/axis2/context/MessageContext;)Lorg/apache/axis2/context/MessageContext;+71
+j  org.apache.axis2.description.OutInAxisOperationClient.executeImpl(Z)V+381
+j  org.apache.axis2.client.OperationClient.execute(Z)V+13
+j  com.salesforce.soap.partner.SforceServiceStub.login(Lcom/salesforce/soap/partner/Login;Lcom/salesforce/soap/partner/LoginScopeHeader;Lcom/salesforce/soap/partner/CallOptions;)Lcom/salesforce/soap/partner/LoginResponse;+209
+j  org.talend.salesforce.SforceBasicConnection.renewSession()V+24
+j  org.talend.salesforce.SforceBasicConnection.init()V+92
+j  org.talend.salesforce.SforceBasicConnection.<init>(Lorg/talend/salesforce/SforceBasicConnection$Builder;)V+57
+j  org.talend.salesforce.SforceBasicConnection.<init>(Lorg/talend/salesforce/SforceBasicConnection$Builder;Lorg/talend/salesforce/SforceBasicConnection$1;)V+2
+j  org.talend.salesforce.SforceBasicConnection$Builder.build()Lorg/talend/salesforce/SforceBasicConnection;+6
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSalesforceInput_1Process(Ljava/util/Map;)V+756
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSetGlobalVar_1Process(Ljava/util/Map;)V+261
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.tSalesforceInput_2Process(Ljava/util/Map;)V+88
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.runJobInTOS([Ljava/lang/String;)I+583
+j  ossis_v1.impsf_exptempcsv_0_1.impsf_exptempcsv.runJob([Ljava/lang/String;)[[Ljava/lang/String;+2
+j  ossis_v1.integracao_0_1.Integracao.tRunJob_1Process(Ljava/util/Map;)V+518
+j  ossis_v1.integracao_0_1.Integracao.runJobInTOS([Ljava/lang/String;)I+574
+j  ossis_v1.integracao_0_1.Integracao.main([Ljava/lang/String;)V+10
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x4441ac00 JavaThread "MultiThreadedHttpConnectionManager cleanup" daemon [_thread_blocked, id=5332, stack(0x45590000,0x455e0000)]
+  0x43ae7400 JavaThread "Service Thread" daemon [_thread_blocked, id=1340, stack(0x44090000,0x440e0000)]
+  0x43ac5c00 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=2488, stack(0x43fc0000,0x44010000)]
+  0x43ac4800 JavaThread "Attach Listener" daemon [_thread_blocked, id=6892, stack(0x008c0000,0x00910000)]
+  0x43accc00 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=4540, stack(0x43ef0000,0x43f40000)]
+  0x43ab6800 JavaThread "Finalizer" daemon [_thread_blocked, id=3144, stack(0x00500000,0x00550000)]
+  0x43a91800 JavaThread "Reference Handler" daemon [_thread_blocked, id=6860, stack(0x43f50000,0x43fa0000)]
+=>0x0097c800 JavaThread "main" [_thread_in_native, id=5548, stack(0x00920000,0x00970000)]
+
+Other Threads:
+  0x43a8a400 VMThread [stack: 0x43cb0000,0x43d00000] [id=1260]
+  0x43b02c00 WatcherThread [stack: 0x441d0000,0x44220000] [id=3764]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 78656K, used 42402K [0x03400000, 0x08950000, 0x18950000)
+  eden space 69952K,  60% used [0x03400000, 0x05d68920, 0x07850000)
+  from space 8704K,   0% used [0x07850000, 0x07850000, 0x080d0000)
+  to   space 8704K,   0% used [0x080d0000, 0x080d0000, 0x08950000)
+ tenured generation   total 174784K, used 0K [0x18950000, 0x23400000, 0x43400000)
+   the space 174784K,   0% used [0x18950000, 0x18950000, 0x18950200, 0x23400000)
+ Metaspace       used 8267K, capacity 8442K, committed 8448K, reserved 8576K
+
+Card table byte_map: [0x43400000,0x43610000] byte_map_base: 0x433e6000
+
+Polling page: 0x001b0000
+
+CodeCache: size=32768Kb used=1344Kb max_used=1344Kb free=31423Kb
+ bounds [0x011f0000, 0x01348000, 0x031f0000]
+ total_blobs=653 nmethods=487 adapters=97
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.734 Thread 0x43ac5c00  483             java.util.LinkedHashMap::newNode (23 bytes)
+Event: 1.735 Thread 0x43ac5c00 nmethod 483 0x0133f148 code [0x0133f240, 0x0133f3a0]
+Event: 1.735 Thread 0x43ac5c00  484             java.util.LinkedHashMap$Entry::<init> (10 bytes)
+Event: 1.735 Thread 0x43ac5c00 nmethod 484 0x0133f448 code [0x0133f540, 0x0133f5f0]
+Event: 1.735 Thread 0x43ac5c00  485             java.util.LinkedHashMap::linkNodeLast (33 bytes)
+Event: 1.735 Thread 0x43ac5c00 nmethod 485 0x0133f648 code [0x0133f740, 0x0133f810]
+Event: 1.735 Thread 0x43ac5c00  486             java.util.LinkedHashMap::afterNodeInsertion (40 bytes)
+Event: 1.735 Thread 0x43ac5c00 nmethod 486 0x0133f8c8 code [0x0133f9e0, 0x0133fb14]
+Event: 1.737 Thread 0x43ac5c00  487  s          java.io.ByteArrayOutputStream::toByteArray (12 bytes)
+Event: 1.737 Thread 0x43ac5c00 nmethod 487 0x0133fc08 code [0x0133fd10, 0x0133ffdc]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.067 Thread 0x0097c800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x03406e98) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm
+Event: 0.067 Thread 0x0097c800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x03407168) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm\prims\jni.cpp, li
+Event: 0.144 Thread 0x0097c800 Exception <a 'java/security/PrivilegedActionException'> (0x03497630) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.144 Thread 0x0097c800 Exception <a 'java/security/PrivilegedActionException'> (0x03497830) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.186 Thread 0x0097c800 Exception <a 'java/security/PrivilegedActionException'> (0x036ef980) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.186 Thread 0x0097c800 Exception <a 'java/security/PrivilegedActionException'> (0x036efb80) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.187 Thread 0x0097c800 Exception <a 'java/security/PrivilegedActionException'> (0x036f39b8) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.187 Thread 0x0097c800 Exception <a 'java/security/PrivilegedActionException'> (0x036f3bb8) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm\prims\jvm.cpp, line 1390]
+Event: 0.720 Thread 0x0097c800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x03fb6db8) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm\prims\methodHandles.cpp, line 1146]
+Event: 0.722 Thread 0x0097c800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x03fc32f8) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u141\9370\hotspot\src\share\vm\prims\methodHandles.cpp, line 1146]
+
+Events (10 events):
+Event: 1.743 loading class sun/net/InetAddressCachePolicy
+Event: 1.743 loading class sun/net/InetAddressCachePolicy done
+Event: 1.743 loading class sun/net/InetAddressCachePolicy$1
+Event: 1.743 loading class sun/net/InetAddressCachePolicy$1 done
+Event: 1.743 loading class sun/net/InetAddressCachePolicy$2
+Event: 1.743 loading class sun/net/InetAddressCachePolicy$2 done
+Event: 1.743 loading class java/util/LinkedList$ListItr
+Event: 1.743 loading class java/util/LinkedList$ListItr done
+Event: 1.743 loading class java/net/InetAddress$CacheEntry
+Event: 1.744 loading class java/net/InetAddress$CacheEntry done
+
+
+Dynamic libraries:
+0x00320000 - 0x00353000 	C:\ProgramData\Oracle\Java\javapath\java.exe
+0x77500000 - 0x77680000 	C:\Windows\SysWOW64\ntdll.dll
+0x76b30000 - 0x76c40000 	C:\Windows\syswow64\kernel32.dll
+0x76fe0000 - 0x77027000 	C:\Windows\syswow64\KERNELBASE.dll
+0x76a80000 - 0x76b21000 	C:\Windows\syswow64\ADVAPI32.dll
+0x76850000 - 0x768fc000 	C:\Windows\syswow64\msvcrt.dll
+0x769d0000 - 0x769e9000 	C:\Windows\SysWOW64\sechost.dll
+0x75d20000 - 0x75e10000 	C:\Windows\syswow64\RPCRT4.dll
+0x74da0000 - 0x74e00000 	C:\Windows\syswow64\SspiCli.dll
+0x74d90000 - 0x74d9c000 	C:\Windows\syswow64\CRYPTBASE.dll
+0x75e30000 - 0x75f30000 	C:\Windows\syswow64\USER32.dll
+0x76940000 - 0x769d0000 	C:\Windows\syswow64\GDI32.dll
+0x75c90000 - 0x75c9a000 	C:\Windows\syswow64\LPK.dll
+0x76ef0000 - 0x76f8d000 	C:\Windows\syswow64\USP10.dll
+0x74780000 - 0x7491e000 	C:\Windows\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_41e855142bd5705d\COMCTL32.dll
+0x76260000 - 0x762b7000 	C:\Windows\syswow64\SHLWAPI.dll
+0x75cc0000 - 0x75d20000 	C:\Windows\system32\IMM32.DLL
+0x77030000 - 0x770fd000 	C:\Windows\syswow64\MSCTF.dll
+0x746c0000 - 0x7477f000 	C:\Program Files (x86)\Java\jre1.8.0_141\bin\msvcr100.dll
+0x70630000 - 0x709fe000 	C:\Program Files (x86)\Java\jre1.8.0_141\bin\client\jvm.dll
+0x73ce0000 - 0x73ce7000 	C:\Windows\system32\WSOCK32.dll
+0x75f30000 - 0x75f65000 	C:\Windows\syswow64\WS2_32.dll
+0x75ca0000 - 0x75ca6000 	C:\Windows\syswow64\NSI.dll
+0x741d0000 - 0x74202000 	C:\Windows\system32\WINMM.dll
+0x73d10000 - 0x73d19000 	C:\Windows\system32\VERSION.dll
+0x75e10000 - 0x75e15000 	C:\Windows\syswow64\PSAPI.DLL
+0x746b0000 - 0x746bc000 	C:\Program Files (x86)\Java\jre1.8.0_141\bin\verify.dll
+0x74680000 - 0x746a1000 	C:\Program Files (x86)\Java\jre1.8.0_141\bin\java.dll
+0x74660000 - 0x74673000 	C:\Program Files (x86)\Java\jre1.8.0_141\bin\zip.dll
+0x75040000 - 0x75c8c000 	C:\Windows\syswow64\SHELL32.dll
+0x76d20000 - 0x76e7d000 	C:\Windows\syswow64\ole32.dll
+0x76c60000 - 0x76c6b000 	C:\Windows\syswow64\profapi.dll
+0x74640000 - 0x74660000 	C:\Program Files (x86)\Java\jre1.8.0_141\bin\sunec.dll
+0x74620000 - 0x74636000 	C:\Program Files (x86)\Java\jre1.8.0_141\bin\net.dll
+0x73bc0000 - 0x73bfc000 	C:\Windows\system32\mswsock.dll
+0x72ac0000 - 0x72ac6000 	C:\Windows\System32\wship6.dll
+0x71d20000 - 0x71d3c000 	C:\Windows\system32\IPHLPAPI.DLL
+0x71d10000 - 0x71d17000 	C:\Windows\system32\WINNSI.DLL
+0x74610000 - 0x7461d000 	C:\Windows\system32\dhcpcsvc6.DLL
+0x71230000 - 0x71242000 	C:\Windows\system32\dhcpcsvc.DLL
+0x745f0000 - 0x745ff000 	C:\Program Files (x86)\Java\jre1.8.0_141\bin\nio.dll
+0x74090000 - 0x740a7000 	C:\Windows\system32\CRYPTSP.dll
+0x74050000 - 0x7408b000 	C:\Windows\system32\rsaenh.dll
+0x76d00000 - 0x76d17000 	C:\Windows\syswow64\USERENV.dll
+0x74600000 - 0x74609000 	C:\Program Files (x86)\Java\jre1.8.0_141\bin\sunmscapi.dll
+0x765a0000 - 0x766c1000 	C:\Windows\syswow64\CRYPT32.dll
+0x76ee0000 - 0x76eec000 	C:\Windows\syswow64\MSASN1.dll
+0x73b90000 - 0x73b95000 	C:\Windows\System32\wshtcpip.dll
+0x70ac0000 - 0x70b04000 	C:\Windows\system32\DNSAPI.dll
+0x70a00000 - 0x70a06000 	C:\Windows\system32\rasadhlp.dll
+0x70a10000 - 0x70a48000 	C:\Windows\System32\fwpuclnt.dll
+0x73f40000 - 0x7402b000 	C:\Windows\system32\DBGHELP.DLL
+
+VM Arguments:
+jvm_args: -Xms256M -Xmx1024M 
+java_command: ossis_v1.integracao_0_1.Integracao --context=Default
+java_class_path (initial): .;../lib/routines.jar;../lib/commons-logging-1.1.1.jar;../lib/commons-logging-1.1.1.jar;../lib/mail-1.4.jar;../lib/log4j-1.2.16.jar;../lib/woodstox-core-asl-4.4.1.jar;../lib/mail-1.4.jar;../lib/stax2-api-3.1.4.jar;../lib/geronimo-stax-api_1.0_spec-1.0.1.jar;../lib/woodstox-core-asl-4.4.1.jar;../lib/log4j-1.2.15.jar;../lib/geronimo-stax-api_1.0_spec-1.0.1.jar;../lib/commons-collections-3.2.jar;../lib/stax2-api-3.1.4.jar;../lib/commons-httpclient-3.1.jar;../lib/talend_file_enhanced_20070724.jar;../lib/commons-codec-1.6.jar;../lib/httpcore-4.2.1.jar;../lib/trove.jar;../lib/wsdl4j-1.6.3.jar;../lib/commons-httpclient-3.1.jar;../lib/wsdl4j-1.6.3.jar;../lib/axis2-transport-http-1.6.2.jar;../lib/activation-1.1.jar;../lib/salesforceCRMManagement.jar;../lib/axiom-api-1.2.13.jar;../lib/axis2-kernel-1.6.2.jar;../lib/axis2-kernel-1.6.2.jar;../lib/axiom-api-1.2.13.jar;../lib/axis2-adb-1.6.2.jar;../lib/dom4j-1.6.1.jar;../lib/axis2-adb-1.6.2.jar;../lib/jboss-serialization.jar;../lib/axis2-transport-http-1.6.2.jar;../lib/talendcsv.jar;../lib/axis2-transport-local-1.6.2.jar;../lib/xmlschema-core-2.0.1.jar;../lib/activation-1.1.jar;../lib/commons-codec-1.6.jar;../lib/neethi-3.0.1.jar;../lib/salesforceCRMManagement.jar;../lib/neethi-3.0.1.jar;../lib/httpcore-4.2.1.jar;../lib/axiom-impl-1.2.13.jar;../lib/advancedPersistentLookupLib-1.0.jar;../lib/axis2-transport-local-1.6.2.jar;../lib/axiom-impl-1.2.13.jar;../lib/xmlschema-core-2.0.1.jar;integracao_0_1.jar;createcsv_0_1.jar;update_flag_0_1.jar;impsf_exptempcsv_0_1.jar;
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\SQLData\x86\100\Tools\Binn\;D:\SQLData\100\Tools\Binn\;D:\SQLData\100\DTS\Binn\;D:\SQLData\x86\100\Tools\Binn\VSShell\Common7\IDE\;D:\SQLData\x86\100\DTS\Binn\;d:\SQLData\x86\90\Tools\binn\;C:\Program Files\Dell\SysMgt\iSM\shared\bin;C:\Program Files\Dell\SysMgt\iSM\ismeng\bin;C:\Program Files\Dell\SysMgt\iSM\ismmod\bin
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows Server 2008 R2 , 64 bit Build 7601 (6.1.7601.23915)
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 45 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 33507884k(29647648k free), swap 67013908k(62991504k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.141-b15) for windows-x86 JRE (1.8.0_141-b15), built on Jul 12 2017 04:25:45 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Wed Oct 11 10:08:13 2017
+elapsed time: 2 seconds (0d 0h 0m 2s)
+
